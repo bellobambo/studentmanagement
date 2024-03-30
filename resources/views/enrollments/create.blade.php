@@ -20,9 +20,8 @@
                     @endforeach
                 </select>
 
-
                 <label for="">Student</label>
-                <select name="batch_id" id="batch_id" class="form-control">
+                <select name="student_id" id="student_id" class="form-control">
                     @foreach ($students as $id => $name)
                         <option value="{{ $id }}">
                             {{ $name }}
