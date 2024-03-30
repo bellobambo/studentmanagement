@@ -31,7 +31,7 @@
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $student->name }}</td>
                                     <td>{{ $student->syllabus }}</td>
-                                    <td>{{ $student->duration }}</td>
+                                    <td>{{ $student->duration() }}</td>
                                     <td class="d-flex">
                                         <a href="{{ url('/courses/' . $student->id) }}"
                                             class="btn btn-primary btn-sm" title="vie Courses">
