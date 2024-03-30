@@ -29,7 +29,8 @@
                                 @foreach ($payments as $item)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $item->enrollment->enroll_no }}</td>
+                                    <td>{{ $item->enrollment ? $item->enrollment->enroll_no : 'N/A' }}</td>
+
                                     <td>{{ $item->paid_date }}</td>
                                     <td>{{ $item->amount }}</td>
                                     <td class="d-flex">
@@ -48,7 +49,13 @@
                                                 <i class="fa fa-trash" aria-hidden="true"></i> Delete
                                             </button>
                                         </form>
+                                        <a href="{{ url('/report/report1/' . $item->id) }}"
+                                            title="Edit payments">
+                                            <button class="btn btn-success">
+                                                <i class="fa fa-pencil" aria-hidden="true"></i> Print
 
+                                            </button>
+                                        </a>
                                     </td>
                                 </tr>
                                 @endforeach
